@@ -1,0 +1,112 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/all.min.css">
+  </head>
+  <body>
+    <nav>
+      <h2 id="logo">Naveen Tummalacherla</h2>
+      <ul class="navigation-items">
+        <li class="navigation-item"><a href="#about-me">About Me</a></li>
+        <li class="navigation-item"><a href="#projects">Projects</a></li>
+        <li class="navigation-item"><a href="#skills">Skills</a></li>
+        <li class="navigation-item"><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <section id="about-me">
+        <div class="about-me-container">
+          <div class="about-me-text-container">
+            <h2>About Me</h2>
+            <p>
+                Hey there, I'm Naveen, a full-stack developer with a year's experience in digital marketing.  
+            </p>
+            <p>
+                Blending my marketing insights with technical skills, I thrive in crafting engaging campaigns and building robust web applications.
+            </p>
+            <p>
+                Known for my adaptability and attention to detail, I'm passionate about pushing the boundaries of innovation in both technology and marketing. Keep an eye on me as I continue to make waves in this dynamic landscape.
+            </p>
+            <p>
+              Fun fact! I've been programing for
+              <span id="time-container">703,949,077</span> seconds!
+            </p>
+          </div>
+          <img src="./images/IMG_20230412_213153_747 - Copy.png" alt="A photo of Naveen" class="portrait">
+        </div>
+      </section>
+
+      <section id="projects">
+        <h2>Projects</h2>
+        <details class="project">
+          <summary class="project-title">
+            <h3>Kevin Weather</h3>
+          </summary>
+          <img src="./images/3103241.png" alt="Practice Project on Javascript" class="project-image">
+          <p class="project-description">
+            In this project, I converted the temperatures to different scales using Javascript
+          </p>
+        </details>
+        <details class="project">
+          <summary class="project-title">
+            <h3>Wine Festival Schedule</h3>
+          </summary>
+          <img src="./images/3103242.png" alt="Project on HTML table" class="project-image">
+          <p class="project-description">
+            In this project, I did practiced on HTML Tables to schedule a wine festiva.
+          </p>
+        </details>
+        <details class="project">
+          <summary class="project-title">
+            <h3>Personal Portfolio Project</h3>
+          </summary>
+          <img src="./images/3103243.png" alt="Personal Portfolio Project Created using HTML, CSS, JS" time-tested,="" safe="" and="" secure""="" class="project-image">
+          <p class="project-description">
+            This project is what you're seeing now. This project is created using HTML, CSS, and JS.
+          </p>
+        </details>
+      </section>
+
+      <section id="skills">
+        <h2>Skills</h2>
+        <div id="skills-container">
+          <i class="fab fa-html5"></i>
+          <i class="fab fa-css3-alt"></i>
+          <i class="fab fa-js"></i>
+          <i class="fab fa-react"></i>
+          <i class="fab fa-aws"></i>
+          <i class="fab fa-sketch"></i>
+          <i class="fab fa-figma"></i>
+          <i class="fab fa-git"></i>
+          <i class="fab fa-chrome"></i>
+          <i class="fas fa-terminal"></i>
+          <i class="fas fa-universal-access"></i>
+          <i class="fab fa-npm"></i>
+          <i class="fab fa-node"></i>
+          <i class="fab fa-github"></i>
+        </div>
+      </section>
+    </main>
+
+    <footer>Made with <span class="heart">♥</span> in India</footer>
+  
+  <script>
+    const timeContainer = document.getElementById("time-container");
+    const BIRTH_DAY = "12-10-2001";
+    const BIRTH_DAY_DATE = new Date(BIRTH_DAY);
+    const intlNumberFormatter = new Intl.NumberFormat("en-US");
+
+    setInterval(() => {
+      const now = new Date();
+      const difference = Math.floor(
+        (now.getTime() - BIRTH_DAY_DATE.getTime()) / 1000
+      );
+
+      timeContainer.innerText = intlNumberFormatter.format(difference);
+    }, 1000);
+  </script>
+
+</body></html>
